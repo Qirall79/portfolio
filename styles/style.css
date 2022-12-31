@@ -1,0 +1,491 @@
+/*---- Font imports ----*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/*---- Basic styles ----*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
+section {
+  width: 100%;
+  padding: 5% 10%;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+
+#hero h1 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 2.7rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+#hero h1 span {
+  color: #dd6672;
+  font-weight: 500;
+}
+
+#hero a {
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  border: 2px solid white;
+  color: white;
+  display: inline-block;
+  overflow: hidden;
+  padding: 15px 45px 15px 40px;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+#hero a::after,
+#hero a::before {
+  background: white;
+  transition: 0.3s ease;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+#hero a::before {
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+#hero a:hover {
+  color: #000014;
+}
+
+#hero a:hover::before {
+  right: 0;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 41);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*------ About -----*/
+#about {
+  min-height: 100vh;
+  background-color: rgb(0, 0, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#about h2,
+#projects h2 {
+  font-size: 3rem;
+  margin-bottom: 100px;
+}
+
+.about-infos {
+  width: 80%;
+  min-height: 700px;
+  border: 0.5px solid #dddce033;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-infos > div {
+  width: 100%;
+}
+
+.about-infos .head {
+  height: 30px;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  background-color: #dddce021;
+  display: flex;
+}
+
+.about-infos .head > div {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.red {
+  background-color: tomato;
+}
+
+.yellow {
+  background-color: rgb(255, 217, 0);
+}
+
+.green {
+  background-color: rgb(41, 206, 0);
+}
+
+.about-infos .content {
+  padding: 45px 40px;
+}
+
+.about-infos .command {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.command h4 {
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #ebcb8b;
+}
+
+.command p {
+  color: #e5e9f0;
+  line-height: 1.5;
+}
+
+.command a {
+  text-decoration: none;
+  color: #c2646e;
+}
+
+.command.education span {
+  color: #88c0d0;
+}
+
+.command.skills p {
+  color: #88c0d0;
+}
+
+.command .prompt {
+  background-color: #ebcb8b;
+}
+/*---- prompt ----*/
+.prompt {
+  background-color: white;
+  animation: promptAnimation 1s steps(1) infinite;
+}
+
+@keyframes promptAnimation {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*----- Projects -----*/
+#projects {
+  padding: 5%;
+  min-height: 100vh;
+  background-color: rgb(4, 4, 32);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 150px;
+}
+
+#projects h2 {
+  margin-bottom: 0;
+}
+
+.project {
+  width: 90%;
+  min-height: 700px;
+  display: flex;
+  position: relative;
+}
+
+.project.right {
+  justify-content: flex-end;
+}
+
+.project .image {
+  width: 70%;
+  min-height: 100%;
+  background-color: #00313f;
+  display: flex;
+  align-items: center;
+}
+
+.project.left .image {
+  justify-content: flex-start;
+}
+
+.project.right .image {
+  justify-content: flex-end;
+}
+
+.project img {
+  width: 90%;
+  height: 70%;
+}
+
+.project-infos {
+  display: flex;
+  position: absolute;
+  width: 40%;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.project.left .project-infos {
+  left: 70%;
+  transform: translateX(-10%);
+}
+
+.project.right .project-infos {
+  right: 70%;
+  width: 37%;
+  transform: translateX(10%);
+}
+
+.project-infos h3 {
+  font-size: 2.5rem;
+}
+
+.project-infos p {
+  font-size: 1.3rem;
+}
+
+.project-infos a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: relative;
+  color: white;
+  padding: 7px 15px;
+  border-bottom: 2px solid #c2646e;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.project-infos a::before {
+  background-color: #c2646e;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.25s ease;
+}
+
+.project-infos a::after {
+  position: absolute;
+  right: 2.34375rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(50%);
+  -ms-transform: translateY(-50%) translateX(50%);
+  transform: translateY(-50%) translateX(50%);
+  font-size: 1.75em;
+}
+
+.project-infos a:hover::before {
+  top: 0;
+}
+
+/*----- Footer -----*/
+footer {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000014;
+  position: relative;
+}
+
+footer a {
+  font-size: 30px;
+  color: white;
+  transition: all 0.2s;
+}
+
+footer a:hover,
+footer a.arrow:hover {
+  color: #c2646e;
+}
+
+footer a:not(:last-child) {
+  margin-right: 30px;
+}
+footer a.arrow {
+  position: absolute;
+  top: -40px;
+  color: #ebcb8b;
+  animation: arrowJump 2s infinite;
+  margin-right: 0;
+}
+
+@keyframes arrowJump {
+  from {
+    top: -20px;
+  }
+  50% {
+    top: -40px;
+  }
+  to {
+    top: -20px;
+  }
+}
+
+/*----- Media queries -----*/
+
+@media (max-width: 1200px) {
+  #projects {
+    padding: 50px 2%;
+    gap: 100px;
+  }
+  .project {
+    min-height: 600px;
+  }
+  .project .image {
+    height: 600px;
+  }
+}
+
+@media (max-width: 950px) {
+  #about h2,
+  #projects h2 {
+    font-size: 2.5rem;
+  }
+  .project .image {
+    height: 500px;
+  }
+  .project-infos h3 {
+    font-size: 2rem;
+  }
+
+  .project-infos {
+    padding-top: 50px;
+    gap: 40px;
+  }
+
+  .project-infos p {
+    font-size: 1.1rem;
+  }
+  .project-infos a {
+    font-size: 1rem;
+  }
+
+  #projects {
+    gap: 20px;
+  }
+  #projects h2 {
+    margin-bottom: 50px;
+  }
+  #about {
+    padding: 5% 2%;
+  }
+  .about-infos {
+    width: 90%;
+  }
+  #about p,
+  #about h4 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  #projects {
+    padding: 5% 2% 100px;
+    gap: 100px;
+  }
+  .project {
+    min-height: 400px;
+  }
+  .project .image {
+    height: 400px;
+  }
+  .project-infos h3 {
+    font-size: 1.7rem;
+  }
+
+  .project-infos p {
+    font-size: 0.9rem;
+  }
+  .project-infos a {
+    font-size: 0.8rem;
+  }
+  .project-infos {
+    padding-top: 50px;
+    gap: 30px;
+  }
+  #projects {
+    gap: 100px;
+  }
+  #projects h2 {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 470px) {
+  .project {
+    min-height: 300px;
+  }
+  .project .image {
+    height: 300px;
+  }
+  .project-infos h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-infos p {
+    font-size: 0.7rem;
+  }
+  .project-infos a {
+    font-size: 0.7rem;
+  }
+  .project-infos {
+    padding-top: 40px;
+    gap: 20px;
+  }
+  #projects {
+    gap: 100px;
+  }
+  #about {
+    padding: 5% 0%;
+  }
+}
