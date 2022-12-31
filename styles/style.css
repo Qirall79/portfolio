@@ -408,6 +408,7 @@ footer a.arrow {
   #projects h2 {
     font-size: 2.5rem;
   }
+
   .project .image {
     height: 500px;
   }
@@ -446,6 +447,9 @@ footer a.arrow {
 }
 
 @media (max-width: 650px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
   #projects {
     padding: 5% 2% 100px;
     gap: 100px;
