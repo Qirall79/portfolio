@@ -191,6 +191,11 @@ section {
 .command a {
   text-decoration: none;
   color: #c2646e;
+  transition: all 0.2s;
+}
+
+.command a:hover {
+  color: #bd9196;
 }
 
 .command.education span {
