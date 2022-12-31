@@ -14,6 +14,7 @@ html {
 
 body {
   font-family: "Source Code Pro", monospace;
+  overflow-x: hidden;
 }
 
 section {
@@ -34,7 +35,17 @@ section {
   font-size: 2.7rem;
   line-height: 1.5;
   font-weight: 400;
+  transition: all 1s;
+  opacity: 0;
+}
+
+#hero h1:first-of-type {
+  left: 30%;
+}
+
+#hero h1:last-of-type {
   margin-bottom: 30px;
+  right: 30%;
 }
 
 #hero h1 span {
@@ -52,7 +63,8 @@ section {
   overflow: hidden;
   padding: 15px 45px 15px 40px;
   text-decoration: none;
-  transition: 0.4s ease;
+  transition: opacity 1s ease 0.5s, background-color 1s ease;
+  opacity: 0;
 }
 
 #hero a::after,
