@@ -506,7 +506,19 @@ footer a.arrow {
   #projects {
     gap: 100px;
   }
+  #projects div:first-child {
+    margin-bottom: 100px;
+  }
   #about {
     padding: 5% 0%;
+  }
+}
+
+@media (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 900px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero a {
+    font-size: 0.8rem;
   }
 }
