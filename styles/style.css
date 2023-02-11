@@ -239,6 +239,10 @@ section {
   gap: 150px;
 }
 
+#projects div:first-child img {
+  border-radius: 20px;
+}
+
 #projects h2 {
   margin-bottom: 0;
 }
@@ -444,6 +448,9 @@ footer a.arrow {
   #about h4 {
     font-size: 0.8rem;
   }
+  #projects div:first-child {
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -480,6 +487,9 @@ footer a.arrow {
   #projects h2 {
     margin-bottom: 10px;
   }
+  #projects div:first-child {
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 470px) {
@@ -507,7 +517,7 @@ footer a.arrow {
     gap: 100px;
   }
   #projects div:first-child {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
   }
   #about {
     padding: 5% 0%;
