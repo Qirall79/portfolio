@@ -209,6 +209,13 @@ section {
 .command .prompt {
   background-color: #ebcb8b;
 }
+
+.command img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
 /*---- prompt ----*/
 .prompt {
   background-color: white;
@@ -531,4 +538,8 @@ footer a.arrow {
   #hero a {
     font-size: 0.8rem;
   }
+}
+
+#shadow-host-companion {
+  display: none;
 }
