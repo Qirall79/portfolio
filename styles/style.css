@@ -15,6 +15,7 @@ html {
 body {
   font-family: "Source Code Pro", monospace;
   overflow-x: hidden;
+  background: rgb(4, 4, 32);
 }
 
 section {
@@ -238,12 +239,14 @@ section {
 #projects {
   padding: 5%;
   min-height: 100vh;
+  max-width: 1650px;
   background-color: rgb(4, 4, 32);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 150px;
+  margin: 0 auto;
 }
 
 #projects div:first-child img {
@@ -255,7 +258,6 @@ section {
 }
 
 .project {
-  width: 90%;
   min-height: 700px;
   display: flex;
   position: relative;
@@ -290,7 +292,7 @@ section {
 .project-infos {
   display: flex;
   position: absolute;
-  width: 40%;
+  max-width: 40%;
   flex-direction: column;
   padding-top: 100px;
   align-items: flex-start;
